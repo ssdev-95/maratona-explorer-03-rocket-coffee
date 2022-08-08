@@ -2,36 +2,21 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { reactive } from 'vue'
+import { drinks, brunch, loading, populateProducts } from './composables/products.ts'
+
 import Header from './components/Header.vue'
 import Section from './components/Section.vue'
+import Switcher from './components/Switcher.vue'
+import Loader from './components/Loader.vue'
 
-let brunch = reactive<IProduct[]>([])
-
-let drinks = reactive<IProduct[]>([])
-
-fetch(`${import.meta.env.VITE_API_URL}brunch`)
-  .then((res) => res.json())
-  .then((json) => {
-    brunch.value = json
-  })
-  .catch((err) => console.log(err))
-
-fetch(`${import.meta.env.VITE_API_URL}drinks`)
-  .then((res) => res.json())
-  .then((json) => {
-    drinks.value = json
-  })
+populateProducts()
   .catch((err) => console.log(err))
 </script>
 
 <template>
   <Header />
-  <Section name="BRUNCH" :products="brunch" />
-  <Section name="DRINKS" :products="drinks" />
+  <Section v-if="!loading" name="BRUNCH" />
+  <Section v-if="!loading" name="DRINKS" />
+	<Loader v-if="loading" />
+	<Switcher />
 </template>
-
-<style scoped>
-h1 {
-  color: red;
-}
-</style>

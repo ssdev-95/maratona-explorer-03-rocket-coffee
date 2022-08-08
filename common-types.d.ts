@@ -5,4 +5,9 @@ declare namespace RocketCoffee {
     description: string
     price: number
   }
+
+	export interface ICoffeeMenu {
+		drinks:IProduct[]
+		brunch:IProduct[]
+	}
 }

@@ -1,18 +1,24 @@
+<script setup lang="ts">
+  import { reactive } from 'vue'
+  import Product from './Product.vue'
+	import * as Coffee from '../composables/products.ts'
+
+	const { name } = defineProps<{
+	  name: string
+	}>()
+
+	const list = Coffee[name.toLowerCase()]
+</script>
+
 <template>
   <section>
     <header>
       <h1>{{ name }}</h1>
     </header>
 
-    <Product v-for="product in products" :key="product.id" :product="product" />
+    <Product v-for="product in list" :key="product.id" :product="product" />
   </section>
 </template>
-
-<script setup lang="ts">
-import Product from './Product.vue'
-
-const { name, products } = defineProps<{ name: string; products: IProduct[] }>()
-</script>
 
 <style scoped>
 section {
