@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
-	  <div class="circle" />
+	  <div class="circle" :class="isDarkThemeEnabled ? 'dark' : ''" />
 	</div>
 </template>
 
 <script setup lang="ts">
+import { isDarkThemeEnabled } from '../composables/theme.ts'
 </script>
 
 <style scoped>
@@ -18,7 +19,7 @@
   height: 4rem;
 	width: 4rem;
 	border-radius: 6rem;
-	background: linear-gradient(90deg,var(--brown) 35%,transparent);
+	background-image: linear-gradient(90deg,var(--brown) 35%,transparent);
 	position: relative;
 
 	animation: SPIN 2s infinite cubic-bezier(0.7,0.7,0.7,0.7);
@@ -37,6 +38,14 @@
 	left: 50%;
 
   transform: translateX(-50%) translateY(-50%);
+}
+
+.circle.dark {
+  background-image: linear-gradient(90deg,var(--salmon) 35%,transparent);
+}
+
+.circle.dark::before {
+  background-color: var(--brown);
 }
 
 @keyframes SPIN {

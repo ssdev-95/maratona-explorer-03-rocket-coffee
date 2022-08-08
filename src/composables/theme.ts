@@ -1,3 +1,3 @@
 import { ref } from 'vue'
 
-export let isDarkThemeEnabled = ref(false)
+export let isDarkThemeEnabled = ref(true)

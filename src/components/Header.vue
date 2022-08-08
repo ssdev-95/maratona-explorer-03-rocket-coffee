@@ -1,9 +1,13 @@
 <template>
   <header>
-    <h1>Rocket<span>Coffee</span></h1>
-    <p>Open everyday, 8am ~ 9pm</p>
+    <h1 class="logo" :class="isDarkThemeEnabled ? 'dark' : ''">Rocket<span>Coffee</span></h1>
+    <p class="text" :class="isDarkThemeEnabled ? 'dark' : ''">Open everyday, 8am ~ 9pm</p>
   </header>
 </template>
+
+<script setup lang="ts">
+import { isDarkThemeEnabled } from '../composables/theme.ts'
+</script>
 
 <style scoped lang="css">
 header {
@@ -17,16 +21,28 @@ header {
   gap: 0.5rem;
 }
 
-header > h1 {
+.logo {
   color: #1c1c1c;
   text-transform: uppercase;
 }
 
-header > h1 > span {
+.logo > span {
   color: var(--brown);
 }
 
-header > p {
+.logo.dark {
+  color: var(--white);
+}
+
+.logo.dark > span {
+   color: var(--salmon);
+}
+
+.text {
   color: var(--gray);
+}
+
+.text.dark {
+  color: var(--beige);
 }
 </style>

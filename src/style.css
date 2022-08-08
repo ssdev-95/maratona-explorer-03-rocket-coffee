@@ -12,6 +12,7 @@
 }
 
 :root {
+	--white: #f0f2f5;
   --black: #000000;
   --gray: #2d2c2a;
   --beige: #ffedd5;
@@ -22,13 +23,6 @@
 html {
   font-size: 16px;
 	scroll-behavior: smooth;
-}
-
-#app {
-  background-color: var(--beige);
-  width: 100vw;
-  min-height: 100vh;
-	padding-bottom: 3rem;
 }
 
 @media (max-width: 869px) {

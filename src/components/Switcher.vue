@@ -1,5 +1,5 @@
 <template>
-  <label class="wrapper">
+  <label class="wrapper" :class="isDarkThemeEnabled ? 'dark' : ''">
 	  <div class="switcher">
 		  <input v-model="isDarkThemeEnabled" type="checkbox" />
 			<div class="thumb" :class="isDarkThemeEnabled ? 'dark' : ''" />
@@ -22,6 +22,12 @@ import { isDarkThemeEnabled } from '../composables/theme.ts'
 	background-color: var(--brown);
 
 	border-radius: 5rem;
+	transition: background-color 0.25s cubic-bezier(0.7,0.7,0.7,0.7);
+}
+
+
+.wrapper.dark {
+  background-color: var(--salmon);
 }
 
 .switcher {
@@ -34,7 +40,7 @@ import { isDarkThemeEnabled } from '../composables/theme.ts'
   height: 1.9rem;
 	width: 1.9rem;
 	border-radius: 1.6rem;
-	background-color: #fff;
+	background-color: var(--white);
 	position: absolute;
 	left: -4px;
 	top: -3px;
