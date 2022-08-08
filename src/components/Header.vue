@@ -1,7 +1,17 @@
 <template>
   <header>
-    <h1 class="logo" :class="isDarkThemeEnabled ? 'dark' : ''">Rocket<span>Coffee</span></h1>
-    <p class="text" :class="isDarkThemeEnabled ? 'dark' : ''">Open everyday, 8am ~ 9pm</p>
+    <h1
+      class="logo"
+      :class="isDarkThemeEnabled ? 'dark' : ''"
+    >
+      Rocket<span>Coffee</span>
+    </h1>
+    <p
+      class="text"
+      :class="isDarkThemeEnabled ? 'dark' : ''"
+    >
+      Open everyday, 8am ~ 9pm
+    </p>
   </header>
 </template>
 
@@ -35,7 +45,7 @@ header {
 }
 
 .logo.dark > span {
-   color: var(--salmon);
+  color: var(--salmon);
 }
 
 .text {

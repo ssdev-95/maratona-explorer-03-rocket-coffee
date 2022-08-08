@@ -1,20 +1,22 @@
 <script setup lang="ts">
-  import { reactive } from 'vue'
-  import Product from './Product.vue'
-	import * as Coffee from '../composables/products.ts'
-	import { isDarkThemeEnabled } from '../composables/theme.ts'
+import { reactive } from 'vue'
+import Product from './Product.vue'
+import * as Coffee from '../composables/products.ts'
+import { isDarkThemeEnabled } from '../composables/theme.ts'
 
-	const { name } = defineProps<{
-	  name: string
-	}>()
+const { name } = defineProps<{
+  name: string
+}>()
 
-	const list = Coffee[name.toLowerCase()]
+const list = Coffee[name.toLowerCase()]
 </script>
 
 <template>
   <section>
     <header>
-      <h1 class="title" :class="isDarkThemeEnabled ? 'dark' : ''">{{ name }}</h1>
+      <h1 class="title" :class="isDarkThemeEnabled ? 'dark' : ''">
+        {{ name }}
+      </h1>
     </header>
 
     <Product v-for="product in list" :key="product.id" :product="product" />

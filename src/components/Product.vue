@@ -5,9 +5,7 @@
       <p class="product-description">{{ product.description }}</p>
     </div>
 
-    <strong class="product-price">
-      US${{ product.price.toFixed(2) }}
-    </strong>
+    <strong class="product-price"> US${{ product.price.toFixed(2) }} </strong>
   </div>
 </template>
 
@@ -22,11 +20,13 @@ const { product } = defineProps<{ product: IProduct }>()
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-	padding: 1.45rem 0;
+  padding: 1.45rem 0;
 }
 
-p, h1, strong {
-  transition: color 0.25s cubic-bezier(0.7,0.7,0.7,0.7);
+p,
+h1,
+strong {
+  transition: color 0.25s cubic-bezier(0.7, 0.7, 0.7, 0.7);
 }
 
 .wrapper > div {
@@ -43,10 +43,11 @@ p, h1, strong {
 
 .product-price {
   font-weight: 700;
-	font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
-.wrapper.dark .product-name, .wrapper.dark .product-price {
+.wrapper.dark .product-name,
+.wrapper.dark .product-price {
   color: var(--white);
 }
 

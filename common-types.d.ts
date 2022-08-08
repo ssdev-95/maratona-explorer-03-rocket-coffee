@@ -6,8 +6,8 @@ declare namespace RocketCoffee {
     price: number
   }
 
-	export interface ICoffeeMenu {
-		drinks:IProduct[]
-		brunch:IProduct[]
-	}
+  export interface ICoffeeMenu {
+    drinks: IProduct[]
+    brunch: IProduct[]
+  }
 }

@@ -12,7 +12,7 @@
 }
 
 :root {
-	--white: #f0f2f5;
+  --white: #f0f2f5;
   --black: #000000;
   --gray: #2d2c2a;
   --beige: #ffedd5;
@@ -22,7 +22,7 @@
 
 html {
   font-size: 16px;
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 @media (max-width: 869px) {
