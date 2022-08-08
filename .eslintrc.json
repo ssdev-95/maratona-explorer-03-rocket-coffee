@@ -5,6 +5,7 @@
     "linebreak-style": ["warn", "unix"],
     "quotes": ["warn", "single"],
     "semi": ["warn", "never"],
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "vue/multi-word-component-names": "off"
   }
 }

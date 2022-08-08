@@ -1,42 +1,42 @@
 @font-face {
-	font-family: "Roboto Serif";
-	font-weight: 400 700;
-	src: url("./assets/fonts/RobotoSerif-Regular.ttf") format("ttf");
+  font-family: 'Roboto Serif';
+  font-weight: 400 700;
+  src: url('./assets/fonts/RobotoSerif-Regular.ttf') format('ttf');
 }
 
 * {
   margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: "Roboto Serif", serif;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Serif', serif;
 }
 
 :root {
-	--black: #000000;
-	--gray: #2D2C2A;
-	--beige: #FFEDD5;
-	--salmon: #FED7AA;
-	--brown: #995000;
+  --black: #000000;
+  --gray: #2d2c2a;
+  --beige: #ffedd5;
+  --salmon: #fed7aa;
+  --brown: #995000;
 }
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 #app {
-	background-color: var(--beige);
-	width: 100vw;
-	min-height: 100vh;
+  background-color: var(--beige);
+  width: 100vw;
+  min-height: 100vh;
 }
 
-@media(max-width:869px){
-	html {
-		font-size: 87.5%;
-	}
+@media (max-width: 869px) {
+  html {
+    font-size: 87.5%;
+  }
 }
 
-@media(max-width:375px) {
-	html {
-		font-size: 81.25%;
-	}
+@media (max-width: 375px) {
+  html {
+    font-size: 81.25%;
+  }
 }

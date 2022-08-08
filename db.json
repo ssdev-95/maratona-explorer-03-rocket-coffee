@@ -85,36 +85,36 @@
       "id": "mochaccino-928r"
     }
   ],
-	"brunch": [
-		{
-			"name":"Sweet Waffle",
-			"description":"A waffle to take you to heaven",
-			"id":"waffle-28rhfhsj29eidj",
-			"price":37.90
-		},
-		{
-			"name":"Sweet Rice",
-			"description":"The best rice for life",
-			"id":"rice-28fhhsk2e8",
-			"price":37.90
-		},
-		{
-			"name":"Sweet Apple",
-			"description":"A candy covered apple",
-			"id":"apple-ir8cheb2igebrj",
-			"price":37.90
-		},
-		{
-			"name":"Cheese Cake",
-			"description":"A simple cheese cake",
-			"id":"cheese-n38fh4t8rj",
-			"price":37.90
-		},
-		{
-			"name":"Rocambolle",
-			"description":"A rolled cake",
-			"id":"rocambole-meifhenwkw9dd",
-			"price":37.90
-		}
-	]
+  "brunch": [
+    {
+      "name": "Sweet Waffle",
+      "description": "A waffle to take you to heaven",
+      "id": "waffle-28rhfhsj29eidj",
+      "price": 37.9
+    },
+    {
+      "name": "Sweet Rice",
+      "description": "The best rice for life",
+      "id": "rice-28fhhsk2e8",
+      "price": 37.9
+    },
+    {
+      "name": "Sweet Apple",
+      "description": "A candy covered apple",
+      "id": "apple-ir8cheb2igebrj",
+      "price": 37.9
+    },
+    {
+      "name": "Cheese Cake",
+      "description": "A simple cheese cake",
+      "id": "cheese-n38fh4t8rj",
+      "price": 37.9
+    },
+    {
+      "name": "Rocambolle",
+      "description": "A rolled cake",
+      "id": "rocambole-meifhenwkw9dd",
+      "price": 37.9
+    }
+  ]
 }
